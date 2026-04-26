@@ -22,8 +22,13 @@
     <header class="site-header" id="home">
       <nav class="navbar container" aria-label="Main navigation">
         <a class="brand" href="#home" aria-label="Walk Nepal Home">
-          <span class="brand-mark">WN</span>
-          <span class="brand-text">Walk Nepal</span>
+          <img
+            class="brand-logo"
+            src="images/walk-nepal-logo.jpg"
+            alt="Walk Nepal"
+            width="512"
+            height="334"
+          />
         </a>
 
         <button
@@ -43,7 +48,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#standards">Care Standards</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a class="btn btn-nav" href="#appointment">Book Now</a></li>
         </ul>
@@ -119,46 +124,37 @@
 
       <section class="about section" id="about">
         <div class="container about-grid">
-          <div>
+          <div class="about-copy">
             <p class="eyebrow">About the Clinic</p>
             <h2>Clinical Expertise with Human-Centered Care</h2>
             <p>
               At Walk Nepal, every treatment plan starts with a detailed assessment and clear recovery goals.
               We focus on education, precision therapy, and long-term prevention.
             </p>
-            <figure class="about-figure image-frame ratio-wide">
-              <img
-                src="images/walk-nepal-equipments-for-kids.jpg"
-                alt="Pediatric physiotherapy equipment and therapy tools arranged inside Walk Nepal"
-                width="1024"
-                height="576"
-                loading="lazy"
-              />
-            </figure>
-          </div>
-          <div class="card stats-card" aria-label="Clinic stats">
-            <figure class="logo-figure image-frame ratio-wide">
-              <img
-                src="images/walk-nepal-logo.jpg"
-                alt="Walk Nepal Physical Therapy and Rehabilitation clinic logo"
-                width="512"
-                height="334"
-                loading="lazy"
-              />
-            </figure>
-            <div>
-              <h3>12+ Years</h3>
-              <p>Combined team experience</p>
-            </div>
-            <div>
-              <h3>5,000+</h3>
-              <p>Successful patient sessions</p>
-            </div>
-            <div>
-              <h3>95%</h3>
-              <p>Patient satisfaction score</p>
+            <div class="stats-card" aria-label="Clinic stats">
+              <div>
+                <h3>12+ Years</h3>
+                <p>Combined team experience</p>
+              </div>
+              <div>
+                <h3>5,000+</h3>
+                <p>Successful patient sessions</p>
+              </div>
+              <div>
+                <h3>95%</h3>
+                <p>Patient satisfaction score</p>
+              </div>
             </div>
           </div>
+          <figure class="about-figure image-frame ratio-wide">
+            <img
+              src="images/walk-nepal-equipments-for-kids.jpg"
+              alt="Pediatric physiotherapy equipment and therapy tools arranged inside Walk Nepal"
+              width="1024"
+              height="576"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </section>
 
@@ -227,34 +223,25 @@
         </div>
       </section>
 
-      <section class="testimonials section" id="testimonials">
+      <section class="testimonials section" id="standards">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Testimonials</p>
-            <h2>What Patients Say</h2>
+            <p class="eyebrow">Care Standards</p>
+            <h2>Premium Care, Clear Expectations</h2>
           </div>
           <div class="card-grid testimonial-grid">
-            <blockquote class="card testimonial-card">
-              <p>
-                “I had chronic lower back pain for years. Within a few sessions, I noticed major improvement.
-                The care felt truly personal.”
-              </p>
-              <cite>R. Sharma</cite>
-            </blockquote>
-            <blockquote class="card testimonial-card">
-              <p>
-                “After knee surgery, their structured therapy plan helped me recover faster than expected.
-                Highly professional team.”
-              </p>
-              <cite>M. Karki</cite>
-            </blockquote>
-            <blockquote class="card testimonial-card">
-              <p>
-                “Clean clinic, clear communication, and excellent treatment quality. I feel stronger and more
-                confident now.”
-              </p>
-              <cite>S. Thapa</cite>
-            </blockquote>
+            <article class="card testimonial-card">
+              <h3>Focused Assessment</h3>
+              <p>Each visit starts with careful listening, movement review, and clear recovery priorities.</p>
+            </article>
+            <article class="card testimonial-card">
+              <h3>Guided Recovery</h3>
+              <p>Treatment combines hands-on support, exercise guidance, and practical progress tracking.</p>
+            </article>
+            <article class="card testimonial-card">
+              <h3>Calm Clinic Experience</h3>
+              <p>The environment is designed to feel clean, organized, and supportive from arrival to follow-up.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -267,16 +254,7 @@
             <p>A quick look at our clean, patient-friendly rehabilitation environment.</p>
           </div>
           <div class="card-grid gallery-grid">
-            <figure class="image-frame ratio-square">
-              <img
-                src="images/walk-nepal-equipments-for-kids.jpg"
-                alt="Pediatric therapy tools and equipment arranged in the clinic"
-                width="1024"
-                height="576"
-                loading="lazy"
-              />
-            </figure>
-            <figure class="image-frame ratio-square">
+            <figure class="image-frame ratio-card">
               <img
                 src="images/exercise-ball-roll-mat.jpg"
                 alt="Open therapy floor with exercise balls and soft mat area"
@@ -285,12 +263,12 @@
                 loading="lazy"
               />
             </figure>
-            <figure class="image-frame ratio-square">
+            <figure class="image-frame ratio-card">
               <img
-                src="images/lat-pull-downmachine.jpg"
-                alt="Strength and mobility equipment setup in the rehabilitation room"
-                width="576"
-                height="1024"
+                src="images/walk-nepal-neuro-rehabilitation.jpg"
+                alt="Walk Nepal neuro-rehabilitation support and movement care"
+                width="512"
+                height="292"
                 loading="lazy"
               />
             </figure>
@@ -305,40 +283,45 @@
             <h2>Start Your Recovery Today</h2>
             <p>Book your first consultation and receive a tailored plan to meet your recovery goals.</p>
           </div>
-          <figure class="cta-figure image-frame ratio-card">
-            <img
-              src="images/walk-nepal-logo.jpg"
-              alt="Walk Nepal Physical Therapy and Rehabilitation logo"
-              width="512"
-              height="334"
-              loading="lazy"
-            />
-          </figure>
           <a class="btn btn-accent" href="#contact">Schedule a Visit</a>
         </div>
       </section>
 
       <section class="contact section" id="contact">
         <div class="container contact-grid">
-          <div>
+          <div class="contact-info">
             <p class="eyebrow">Contact Us</p>
             <h2>Visit Walk Nepal</h2>
-            <p>Use the Google Maps listing for the exact clinic location and directions.</p>
+            <p>Find us in Lalitpur and contact the clinic directly for appointment details.</p>
             <div class="contact-details" aria-label="Walk Nepal location details">
               <div class="contact-detail">
                 <span>Business</span>
                 <strong>Walk Nepal</strong>
               </div>
               <div class="contact-detail">
-                <span>Location</span>
-                <strong>Lalitpur, Nepal</strong>
-                <p>Exact location available on Google Maps.</p>
+                <span>Address</span>
+                <strong>Opposite to Santa Nirankari Bhawan, Lalitpur 44700</strong>
+                <p>Walk Nepal, Kathmandu, Nepal</p>
               </div>
               <div class="contact-detail">
-                <span>Appointments</span>
-                <strong>Contact us for appointment details.</strong>
+                <span>Phone</span>
+                <strong><a href="tel:9840705523">9840705523</a></strong>
               </div>
             </div>
+
+            <div class="hours-card" aria-labelledby="hours-title">
+              <h3 id="hours-title">Opening Hours</h3>
+              <dl class="hours-list">
+                <div><dt>Sunday</dt><dd>7 AM &ndash; 6 PM</dd></div>
+                <div><dt>Monday</dt><dd>7 AM &ndash; 6 PM</dd></div>
+                <div><dt>Tuesday</dt><dd>7 AM &ndash; 6 PM</dd></div>
+                <div><dt>Wednesday</dt><dd>7 AM &ndash; 6 PM</dd></div>
+                <div><dt>Thursday</dt><dd>7 AM &ndash; 6 PM</dd></div>
+                <div><dt>Friday</dt><dd>7 AM &ndash; 6 PM</dd></div>
+                <div><dt>Saturday</dt><dd>9 AM &ndash; 5 PM</dd></div>
+              </dl>
+            </div>
+
             <a
               class="btn contact-map-btn"
               href="https://www.google.com/maps/place/Walk+Nepal/@27.6485163,85.3347212,17z/data=!3m1!4b1!4m6!3m5!1s0x39eb17c2d09036c7:0x70fdc3fe03a2cf80!8m2!3d27.6485163!4d85.3373015!16s%2Fg%2F11x810pt4y?entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D"
@@ -348,18 +331,14 @@
               Get Directions
             </a>
           </div>
-          <form class="card contact-form" aria-label="Appointment inquiry form">
-            <label for="name">Full Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-
-            <label for="email">Email Address</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-
-            <label for="message">How can we help?</label>
-            <textarea id="message" name="message" rows="4" placeholder="Describe your concern"></textarea>
-
-            <button type="submit" class="btn">Send Inquiry</button>
-          </form>
+          <div class="map-card" aria-label="Map location for Walk Nepal">
+            <iframe
+              title="Walk Nepal location map"
+              src="https://www.google.com/maps?q=27.6485163,85.3373015&z=16&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
