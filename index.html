@@ -277,13 +277,125 @@
       </section>
 
       <section class="appointment section" id="appointment">
-        <div class="container appointment-wrap">
-          <div>
-            <p class="eyebrow">Appointment</p>
-            <h2>Start Your Recovery Today</h2>
-            <p>Book your first consultation and receive a tailored plan to meet your recovery goals.</p>
+        <div class="container appointment-grid">
+          <div class="appointment-copy">
+            <p class="eyebrow">Book an Appointment</p>
+            <h2>Tell us what you’re dealing with. We’ll help you find the right next step.</h2>
+            <p class="lead appointment-lead">In-person physiotherapy and rehabilitation support. Fast response during clinic hours.</p>
+            <div class="appointment-benefits" aria-label="Appointment benefits">
+              <div class="appointment-benefit">Fast response during clinic hours.</div>
+              <div class="appointment-benefit">In-person physiotherapy and rehabilitation support.</div>
+              <div class="appointment-benefit">Clear next-step guidance from the clinic team.</div>
+            </div>
+            <div class="appointment-contact">
+              <div>
+                <span>Call us</span>
+                <a href="tel:9840705523">9840705523</a>
+              </div>
+              <div>
+                <span>WhatsApp</span>
+                <a
+                  href="https://wa.me/9779840705523?text=Hello%20Walk%20Nepal%2C%20I%20would%20like%20to%20book%20a%20physiotherapy%20appointment."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book on WhatsApp
+                </a>
+              </div>
+            </div>
+            <p class="appointment-note">Prefer quick booking? Message us directly on WhatsApp.</p>
           </div>
-          <a class="btn btn-accent" href="#contact">Schedule a Visit</a>
+
+          <div class="appointment-form-card">
+            <form
+              class="appointment-form"
+              id="appointmentForm"
+              action="https://formsubmit.co/shresthasubik@gmail.com"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="New appointment request - Walk Nepal" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="fullName">Full name</label>
+                  <input id="fullName" name="name" type="text" placeholder="Your full name" required />
+                </div>
+                <div class="field">
+                  <label for="phoneNumber">Phone number</label>
+                  <input id="phoneNumber" name="phone" type="tel" placeholder="98XXXXXXXX" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="emailAddress">Email address</label>
+                  <input id="emailAddress" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+                <div class="field">
+                  <label for="preferredDate">Preferred date</label>
+                  <input id="preferredDate" name="preferred_date" type="date" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="preferredTime">Preferred time</label>
+                  <input id="preferredTime" name="preferred_time" type="time" required />
+                </div>
+                <div class="field">
+                  <label for="serviceNeeded">Service needed</label>
+                  <select id="serviceNeeded" name="service_needed" required>
+                    <option value="" selected disabled>Select a service</option>
+                    <option>Orthopedic Rehabilitation</option>
+                    <option>Post-Surgery Recovery</option>
+                    <option>Neurological Physiotherapy</option>
+                    <option>Sports Injury Care</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="message">Message / symptoms</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Tell us what you’re experiencing and what you’d like help with."
+                ></textarea>
+              </div>
+
+              <label class="consent-row">
+                <input type="checkbox" name="consent" required />
+                <span>I agree to be contacted about this appointment request.</span>
+              </label>
+
+              <div class="appointment-actions">
+                <button type="submit" class="btn btn-accent appointment-submit" id="appointmentSubmit">
+                  Request Appointment
+                </button>
+                <a
+                  class="btn btn-secondary whatsapp-btn"
+                  href="https://wa.me/9779840705523?text=Hello%20Walk%20Nepal%2C%20I%20would%20like%20to%20book%20a%20physiotherapy%20appointment."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book on WhatsApp
+                </a>
+              </div>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+          <figure class="about-figure image-frame ratio-wide">
+            <img
+              src="images/walk-nepal-equipments-for-kids.jpg"
+              alt="Pediatric physiotherapy equipment and therapy tools arranged inside Walk Nepal"
+              width="1024"
+              height="576"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </section>
 

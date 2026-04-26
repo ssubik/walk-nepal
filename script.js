@@ -2,6 +2,9 @@ const menuToggle = document.getElementById("menuToggle");
 const primaryMenu = document.getElementById("primaryMenu");
 const navLinks = primaryMenu ? primaryMenu.querySelectorAll("a") : [];
 const yearNode = document.getElementById("year");
+const appointmentForm = document.getElementById("appointmentForm");
+const appointmentSubmit = document.getElementById("appointmentSubmit");
+const formStatus = document.getElementById("formStatus");
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
@@ -55,7 +58,7 @@ if (menuToggle && primaryMenu) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".section:not(.hero) .section-heading, .card, .image-frame, .stats-card, .appointment-wrap, .contact-info, .map-card"
+  ".section:not(.hero) .section-heading, .card, .image-frame, .stats-card, .appointment-grid, .appointment-copy, .appointment-form-card, .contact-info, .map-card"
 );
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -82,4 +85,42 @@ if (!prefersReducedMotion && "IntersectionObserver" in window) {
   });
 } else if (!prefersReducedMotion) {
   revealTargets.forEach((target) => target.classList.add("show"));
+}
+
+if (appointmentForm && appointmentSubmit && formStatus) {
+  const defaultButtonLabel = appointmentSubmit.textContent.trim();
+
+  appointmentForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (appointmentSubmit.disabled) {
+      return;
+    }
+
+    appointmentSubmit.disabled = true;
+    appointmentSubmit.textContent = "Sending...";
+    appointmentForm.setAttribute("aria-busy", "true");
+    formStatus.textContent = "Sending your request...";
+    formStatus.dataset.state = "loading";
+
+    try {
+      await fetch(appointmentForm.action, {
+        method: "POST",
+        body: new FormData(appointmentForm),
+        mode: "no-cors",
+        credentials: "omit",
+      });
+
+      appointmentForm.reset();
+      formStatus.textContent = "Request sent. We’ll contact you shortly.";
+      formStatus.dataset.state = "success";
+    } catch (error) {
+      formStatus.textContent = "We couldn't send the request right now. Please try again or use WhatsApp.";
+      formStatus.dataset.state = "error";
+    } finally {
+      appointmentForm.removeAttribute("aria-busy");
+      appointmentSubmit.disabled = false;
+      appointmentSubmit.textContent = defaultButtonLabel;
+    }
+  });
 }
