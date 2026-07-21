@@ -1214,8 +1214,25 @@ textarea:focus-visible,
   white-space: nowrap;
 }
 
-.contact-map-btn {
+.contact-actions {
   margin-top: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.contact-map-btn {
+  flex: 1 1 auto;
+}
+
+.gbp-btn {
+  flex: 1 1 auto;
+  gap: 0.4rem;
+}
+
+.gbp-btn span {
+  color: #f5a623;
+  font-size: 1.05em;
 }
 
 .map-card {
@@ -1369,9 +1386,28 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--space-1);
+  gap: var(--space-3);
+  padding-block: var(--space-4);
   font-size: 0.92rem;
-  line-height: 1.45;
+  line-height: 1.55;
+}
+
+.footer-nap {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.footer-name {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
 }
 
 .footer-content a {
@@ -1550,8 +1586,17 @@ textarea {
 
   .footer-content {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: var(--space-5);
+  }
+
+  .footer-meta {
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 0;
+    border-top: 0;
+    flex: 0 0 auto;
   }
 }
 
