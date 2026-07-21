@@ -1,0 +1,16 @@
+{
+  "name": "Walk Nepal",
+  "short_name": "Walk Nepal",
+  "description": "Physiotherapy and rehabilitation clinic in Lalitpur, Nepal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ec",
+  "theme_color": "#566a65",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
