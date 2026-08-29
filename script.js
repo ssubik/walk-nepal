@@ -33,7 +33,7 @@ if (menuToggle && primaryMenu) {
     const clickTarget = event.target;
 
     if (
-      window.innerWidth < 980 &&
+      window.innerWidth < 900 &&
       primaryMenu.classList.contains("open") &&
       !primaryMenu.contains(clickTarget) &&
       !menuToggle.contains(clickTarget)
@@ -44,21 +44,21 @@ if (menuToggle && primaryMenu) {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      if (window.innerWidth < 980) {
+      if (window.innerWidth < 900) {
         setMenuState(false);
       }
     });
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth >= 980) {
+    if (window.innerWidth >= 900) {
       setMenuState(false);
     }
   });
 }
 
 const revealTargets = document.querySelectorAll(
-  ".section:not(.hero) .section-heading, .card, .image-frame, .stats-card, .appointment-grid, .appointment-copy, .appointment-form-card, .contact-info, .map-card"
+  ".section .section-heading, .condition-group, .therapy-card, .neuro-lines li, .early-points li, .pathway-station, .why-card, .gallery-grid .image-frame, .appointment-copy, .appointment-form-card, .faq-item, .contact-info, .map-card"
 );
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
